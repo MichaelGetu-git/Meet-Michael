@@ -1,10 +1,11 @@
 import { JSX } from "react";
 
 import workedat from './workedat.json'
+import { MapPinIcon } from "@heroicons/react/24/outline";
 
 export default function Experience(): JSX.Element {
     return (
-        <div className="min-h-screen !dark:bg-gray-50 py-12 px-4 md:px-10">
+        <div className="min-h-screen !dark:bg-gray-50 px-4 md:px-10">
             <div className="max-w-8xl mx-auto">
                 {/* Header */}
                 <div className="mb-12">
@@ -21,39 +22,34 @@ export default function Experience(): JSX.Element {
                             key={index} 
                             className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl dark:shadow-gray-700/50 dark:hover:shadow-gray-700/70 transition-shadow duration-300 border border-gray-100 dark:border-gray-700 overflow-hidden"
                         >
-                            <div className="p-6 md:p-8">
+                            <div className="p-6 md:p-8 ">
                                 {/* Header Section */}
-                                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
-                                    <div className="flex-1">
-                                        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                                <div className="flex flex-col md:flex-row md:items-start md:justify-between">
+                                    <div className="flex flex-row justify-between md:flex-col md:flex-1">
+                                        <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
                                             {job.role}
                                         </h2>
-                                        <h3 className="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-2">
+                                        <h3 className="text-lg md:text-xl font-semibold text-blue-600 dark:text-blue-400">
                                             {job.company}
                                         </h3>
-                                        <p className="text-gray-600 dark:text-gray-400 text-sm">
-                                            {job.location}
-                                        </p>
                                     </div>
-                                    <div className="mt-3 md:mt-0 md:text-right">
+                                    <div className="mt-3 md:mt-0 md:text-right ">
                                         <p className="text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 px-3 py-2 rounded-lg">
                                             {job.startDate} - {job.endDate}
                                         </p>
                                     </div>
                                 </div>
-
+                                <p className="text-gray-600 dark:text-gray-400 text-sm flex items-center">
+                                            <MapPinIcon className="w-6 h-6"/>{job.location}
+                                 </p>
+                                   
                                 {/* Description */}
-                                <div className="mb-6">
+                                <div className="mb-6 w-full md:w-[80%] p-0 md:px-10">
                                     <div className="text-gray-700 dark:text-gray-300 leading-relaxed">
                                         {job.description}
                                     </div>
                                 </div>
-
-                                {/* Technologies */}
-                                <div>
-                                    <h4 className="text-sm font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wide mb-3">
-                                        Technologies
-                                    </h4>
+                                <div className="p-0 md:px-10">
                                     <div className="flex flex-wrap gap-2">
                                         {job.technologies.map((tech, techind) => (
                                             <span 
