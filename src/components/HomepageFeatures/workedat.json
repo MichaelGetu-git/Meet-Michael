@@ -1,0 +1,20 @@
+[
+    {
+        "company":"Zemenay Tech",
+        "role": "Fullstack Developer",
+        "startDate": "Jul 2025",
+        "endDate": "Present",
+        "location": "Addis Ababa",
+        "technologies": ["React", "React-native","Docusaurus", "Markdown","NextJs"],
+        "description": "Working on developing and maintaing galio framework, a react native module which makes life easy for developers"
+    },
+    {
+        "company": "Alpha Tech",
+        "role": "Frontend Developer",
+        "startDate": "Jan 2023",
+        "endDate": "Jun 2023",
+        "location": "Addis Ababa",
+        "technologies": ["React", "Tailwind","Figma"],
+        "description": "Worked on creating a school enrollment platform design"
+    }
+]
